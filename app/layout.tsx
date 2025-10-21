@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'My Eye View - Experience Real Adventures in Real Time',
+  description: 'Immerse yourself in live, first-person action from the comfort of your home using VR. Watch extreme sports and activities in real-time.',
   generator: 'v0.app',
 }
 
