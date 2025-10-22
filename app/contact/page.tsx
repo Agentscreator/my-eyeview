@@ -117,7 +117,7 @@ export default function Contact() {
 
       <footer className="bg-black py-8 px-6 sm:px-8 mt-16">
         <div className="container max-w-6xl mx-auto text-center">
-          <p className="text-white text-lg font-semibold">MY EYE VIEW C CORP</p>
+          <p className="text-white text-lg font-semibold">MY EYE VIEW CORP</p>
           <p className="text-white/70 text-sm mt-2">
             © {new Date().getFullYear()} My Eye View. All rights reserved.
           </p>

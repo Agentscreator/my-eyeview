@@ -75,7 +75,7 @@ export default function TermsOfUse() {
             <section className="space-y-4">
               <h2 className="text-2xl font-bold text-black mt-8">7. Limitation of Liability</h2>
               <p>
-                My Eye View C Corp shall not be liable for any indirect, incidental, special, consequential, or 
+                My Eye View Corp shall not be liable for any indirect, incidental, special, consequential, or 
                 punitive damages resulting from your use of or inability to use the service.
               </p>
             </section>
@@ -112,7 +112,7 @@ export default function TermsOfUse() {
 
       <footer className="bg-black py-8 px-6 sm:px-8 mt-16">
         <div className="container max-w-6xl mx-auto text-center">
-          <p className="text-white text-lg font-semibold">MY EYE VIEW C CORP</p>
+          <p className="text-white text-lg font-semibold">MY EYE VIEW CORP</p>
           <p className="text-white/70 text-sm mt-2">
             © {new Date().getFullYear()} My Eye View. All rights reserved.
           </p>

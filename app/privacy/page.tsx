@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
             <section className="space-y-4">
               <h2 className="text-2xl font-bold text-black mt-8">1. Information We Collect</h2>
               <p>
-                My Eye View C Corp collects information that you provide directly to us, including:
+                My Eye View Corp collects information that you provide directly to us, including:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Name and contact information (email address, phone number)</li>
@@ -131,7 +131,7 @@ export default function PrivacyPolicy() {
 
       <footer className="bg-black py-8 px-6 sm:px-8 mt-16">
         <div className="container max-w-6xl mx-auto text-center">
-          <p className="text-white text-lg font-semibold">MY EYE VIEW C CORP</p>
+          <p className="text-white text-lg font-semibold">MY EYE VIEW CORP</p>
           <p className="text-white/70 text-sm mt-2">
             © {new Date().getFullYear()} My Eye View. All rights reserved.
           </p>

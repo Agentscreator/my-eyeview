@@ -160,7 +160,7 @@ export default function Home() {
           </div>
 
           <div className="border-t border-white/20 pt-8 text-center space-y-2">
-            <p className="text-white text-xl font-semibold">MY EYE VIEW C CORP</p>
+            <p className="text-white text-xl font-semibold">MY EYE VIEW CORP</p>
             <p className="text-white/70 text-sm">
               © {new Date().getFullYear()} My Eye View. All rights reserved.
             </p>
