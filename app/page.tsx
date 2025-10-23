@@ -1,3 +1,4 @@
+import { WaitlistForm } from "@/components/waitlist-form"
 import { Check, ImageIcon, Headset } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -22,7 +23,11 @@ export default function Home() {
             Immerse yourself in live, first-person action from the comfort of your home using VR.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6 sm:pt-8">
+          <div className="pt-6 sm:pt-8">
+            <WaitlistForm />
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Link href="/pricing">
               <button className="px-8 py-4 text-lg font-bold bg-white text-[#4d86ad] rounded-2xl hover:bg-gray-100 transition-all shadow-xl hover:scale-105">
                 View Pricing

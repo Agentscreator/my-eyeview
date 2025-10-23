@@ -1,3 +1,4 @@
+import { WaitlistForm } from "@/components/waitlist-form"
 import { Check } from "lucide-react"
 import Link from "next/link"
 
@@ -149,10 +150,19 @@ export default function PricingPage() {
             <p className="text-gray-600 text-lg">
               All plans include access to our VR platform and customer support
             </p>
-            <p className="text-gray-500">
-              Billing functionality will be available soon. Join our waitlist to be notified!
-            </p>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-[#4d86ad] py-16 sm:py-20 md:py-24 px-6 sm:px-8">
+        <div className="container max-w-4xl mx-auto text-center space-y-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+            Join the Waitlist
+          </h2>
+          <p className="text-lg sm:text-xl text-white/95 max-w-2xl mx-auto">
+            Be the first to know when billing goes live and get exclusive early access
+          </p>
+          <WaitlistForm />
         </div>
       </section>
 
