@@ -1,7 +1,6 @@
-import { WaitlistForm } from "@/components/waitlist-form"
-import { VideoShowcase } from "@/components/video-showcase"
 import { Check, ImageIcon, Headset } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -23,15 +22,24 @@ export default function Home() {
             Immerse yourself in live, first-person action from the comfort of your home using VR.
           </p>
 
-          <div className="pt-6 sm:pt-8">
-            <WaitlistForm />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6 sm:pt-8">
+            <Link href="/pricing">
+              <button className="px-8 py-4 text-lg font-bold bg-white text-[#4d86ad] rounded-2xl hover:bg-gray-100 transition-all shadow-xl hover:scale-105">
+                View Pricing
+              </button>
+            </Link>
+            <Link href="/experiences">
+              <button className="px-8 py-4 text-lg font-bold bg-black/20 text-white border-2 border-white rounded-2xl hover:bg-black/30 transition-all">
+                See Experiences
+              </button>
+            </Link>
           </div>
         </div>
       </section>
 
       <section className="bg-gray-100 py-16 sm:py-20 md:py-24 px-6 sm:px-8">
         <div className="container max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-10 sm:mb-14 md:mb-16">About</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-10 sm:mb-14 md:mb-16">About Us</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-14">
             <div className="space-y-4">
@@ -94,34 +102,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16 sm:py-20 md:py-24 px-6 sm:px-8">
-        <div className="container max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16 space-y-4">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black">Experience Examples</h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto">
-              Watch real first-person adventures
-            </p>
-          </div>
-
-          <VideoShowcase />
-        </div>
-      </section>
-
       <footer className="bg-black py-16 sm:py-20 md:py-24 px-6 sm:px-8">
         <div className="container max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             <div className="space-y-4">
-              <h3 className="text-white text-lg font-semibold">About</h3>
+              <h3 className="text-white text-lg font-semibold">Pages</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#about" className="text-white/80 hover:text-white transition-colors">
+                  <Link href="/" className="text-white/80 hover:text-white transition-colors">
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#how-it-works" className="text-white/80 hover:text-white transition-colors">
-                    How It Works
-                  </a>
+                  <Link href="/experiences" className="text-white/80 hover:text-white transition-colors">
+                    Experiences
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/pricing" className="text-white/80 hover:text-white transition-colors">
+                    Pricing
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -130,14 +130,14 @@ export default function Home() {
               <h3 className="text-white text-lg font-semibold">Legal</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="/terms" className="text-white/80 hover:text-white transition-colors">
+                  <Link href="/terms" className="text-white/80 hover:text-white transition-colors">
                     Terms of Use
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/privacy" className="text-white/80 hover:text-white transition-colors">
+                  <Link href="/privacy" className="text-white/80 hover:text-white transition-colors">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -151,9 +151,9 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="/contact" className="text-white/80 hover:text-white transition-colors">
+                  <Link href="/contact" className="text-white/80 hover:text-white transition-colors">
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
