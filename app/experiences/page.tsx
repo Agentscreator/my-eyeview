@@ -59,29 +59,29 @@ export default function ExperiencesPage() {
         </div>
       </section>
 
-      <section className="bg-white py-16 sm:py-20 md:py-24 px-6 sm:px-8">
+      <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8">
         <div className="container max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black text-center mb-10 sm:mb-12 md:mb-16 px-4">
             Customer Reviews
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-2xl p-6 sm:p-8 space-y-4 hover:shadow-xl transition-shadow border-2 border-gray-200"
+                className="bg-gray-50 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 space-y-3 sm:space-y-4 hover:shadow-xl transition-shadow border-2 border-gray-200 flex flex-col"
               >
-                <div className="flex gap-1">
+                <div className="flex gap-0.5 sm:gap-1">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-gray-700 text-base sm:text-lg leading-relaxed italic">
+                <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed italic flex-grow">
                   "{testimonial.review}"
                 </p>
-                <div className="pt-4 border-t border-gray-200">
-                  <p className="font-bold text-black">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600">{testimonial.experience}</p>
+                <div className="pt-3 sm:pt-4 border-t border-gray-200">
+                  <p className="font-bold text-black text-sm sm:text-base">{testimonial.name}</p>
+                  <p className="text-xs sm:text-sm text-gray-600">{testimonial.experience}</p>
                 </div>
               </div>
             ))}
@@ -102,13 +102,13 @@ export default function ExperiencesPage() {
         </div>
       </section>
 
-      <section className="bg-[#4d86ad] py-16 sm:py-20 px-6 sm:px-8">
-        <div className="container max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+      <section className="bg-[#4d86ad] py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
+        <div className="container max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white px-4 leading-tight">
             Ready to Start Your Adventure?
           </h2>
           <Link href="/pricing">
-            <button className="px-10 py-5 text-xl font-bold bg-white text-[#4d86ad] rounded-2xl hover:bg-gray-100 transition-all shadow-xl hover:scale-105">
+            <button className="px-8 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl font-bold bg-white text-[#4d86ad] rounded-xl sm:rounded-2xl hover:bg-gray-100 transition-all shadow-xl hover:scale-105 active:scale-95">
               View Pricing Plans
             </button>
           </Link>
