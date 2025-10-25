@@ -1,4 +1,5 @@
 import { WaitlistForm } from "@/components/waitlist-form"
+import { HamburgerMenu } from "@/components/hamburger-menu"
 import { Check, ImageIcon, Headset } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -6,6 +7,7 @@ import Link from "next/link"
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <HamburgerMenu />
       <section className="bg-[#4d86ad] py-16 sm:py-20 md:py-24 lg:py-28 px-6 sm:px-8">
         <div className="container max-w-4xl mx-auto text-center space-y-8 sm:space-y-10">
           <div className="flex flex-col items-center gap-6 sm:gap-8">
