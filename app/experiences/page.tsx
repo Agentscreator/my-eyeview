@@ -80,6 +80,69 @@ const experiences = [
   },
 ]
 
+const additionalReviews = [
+  {
+    sport: "Surfing",
+    name: "Alex K.",
+    review: "Riding those waves felt so real! The rush of catching the perfect wave and the ocean spray - I was completely immersed. Can't wait to try more sessions!",
+    rating: 5,
+  },
+  {
+    sport: "Mountain Climbing",
+    name: "Rachel S.",
+    review: "The views from the summit were breathtaking. Every grip, every step felt authentic. This is the closest I'll get to Everest, and I loved every second!",
+    rating: 5,
+  },
+  {
+    sport: "American Football",
+    name: "Tyler B.",
+    review: "Being in the quarterback's shoes during a live game was insane! The pressure, the plays, the tackles - everything felt so intense. Best sports experience ever!",
+    rating: 5,
+  },
+  {
+    sport: "Snowboarding",
+    name: "Megan L.",
+    review: "Flying down those slopes in VR was incredible. The speed, the turns, the powder - I felt like a pro snowboarder. Absolutely addictive!",
+    rating: 5,
+  },
+  {
+    sport: "Scuba Diving",
+    name: "Chris P.",
+    review: "Swimming with marine life in crystal clear waters was magical. The underwater world came alive in VR. Peaceful yet exhilarating at the same time!",
+    rating: 5,
+  },
+  {
+    sport: "Mountain Biking",
+    name: "Jordan M.",
+    review: "The trails, the jumps, the adrenaline - this captured mountain biking perfectly. I could feel every bump and turn. Such an amazing ride!",
+    rating: 5,
+  },
+  {
+    sport: "Rock Climbing",
+    name: "Samantha W.",
+    review: "The challenge of finding the right holds and the thrill of reaching the top was so realistic. My palms were sweating! Incredible experience!",
+    rating: 5,
+  },
+  {
+    sport: "Rugby",
+    name: "Liam H.",
+    review: "The physicality and teamwork of rugby came through brilliantly. Being in the scrum and making that try - pure adrenaline! Loved it!",
+    rating: 5,
+  },
+  {
+    sport: "Bungee Jumping",
+    name: "Nina R.",
+    review: "That moment of free fall was absolutely terrifying and thrilling at the same time! My heart was racing. This is the perfect way to experience bungee jumping!",
+    rating: 5,
+  },
+  {
+    sport: "Cycling",
+    name: "Derek F.",
+    review: "Racing through scenic routes and feeling the wind - it was like being in the Tour de France! The immersion was fantastic. Can't get enough!",
+    rating: 5,
+  },
+]
+
 export default function ExperiencesPage() {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null)
 
@@ -187,6 +250,54 @@ export default function ExperiencesPage() {
           </section>
         </div>
       ))}
+
+      {/* Additional Reviews Section */}
+      <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8">
+        <div className="container max-w-6xl mx-auto">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4">
+              More Sports, More Thrills
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+              We cover every sport imaginable. Here's what our customers are saying about their experiences.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
+            {additionalReviews.map((review, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 space-y-3 sm:space-y-4 hover:shadow-xl transition-all border-2 border-gray-200 hover:border-[#4d86ad]/30 flex flex-col"
+              >
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg sm:text-xl font-bold text-[#4d86ad]">{review.sport}</h3>
+                  <div className="flex gap-0.5 sm:gap-1">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed italic flex-grow">
+                  "{review.review}"
+                </p>
+                <div className="pt-3 sm:pt-4 border-t border-gray-200">
+                  <p className="font-bold text-black text-sm sm:text-base">{review.name}</p>
+                  <p className="text-xs sm:text-sm text-gray-600">{review.sport} Experience</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 sm:mt-16 text-center">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 font-semibold mb-4">
+              And many more sports coming soon!
+            </p>
+            <p className="text-sm sm:text-base text-gray-600">
+              From extreme sports to professional leagues - experience them all in VR
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="bg-[#4d86ad] py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
         <div className="container max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
