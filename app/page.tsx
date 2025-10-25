@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-100 py-16 sm:py-20 md:py-24 px-6 sm:px-8">
+      <section id="about" className="bg-gray-100 py-16 sm:py-20 md:py-24 px-6 sm:px-8">
         <div className="container max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-10 sm:mb-14 md:mb-16">About Us</h2>
 

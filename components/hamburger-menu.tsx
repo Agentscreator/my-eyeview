@@ -88,23 +88,35 @@ export function HamburgerMenu() {
             {/* About Section */}
             <div className="pt-6 border-t border-white/10">
               <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4 px-1">About</h3>
-              <p className="text-sm text-gray-300 leading-relaxed px-4">
-                Experience real-time VR streams of extreme sports and activities from the comfort of your home.
-              </p>
+              <ul className="space-y-1">
+                <li>
+                  <a
+                    href="#about"
+                    onClick={() => setIsOpen(false)}
+                    className="group flex items-center justify-between px-4 py-3 text-white hover:bg-white/10 rounded-xl transition-all duration-200"
+                  >
+                    <span className="text-base font-medium">About Us</span>
+                    <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-[#4d86ad] group-hover:translate-x-1 transition-all" />
+                  </a>
+                </li>
+              </ul>
             </div>
 
             {/* Contact Section */}
             <div className="pt-6 border-t border-white/10">
               <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4 px-1">Contact</h3>
-              <div className="space-y-3">
-                <a
-                  href="tel:+13024055540"
-                  className="flex items-center gap-3 px-4 py-2.5 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all group"
-                >
-                  <Phone className="w-4 h-4 text-[#4d86ad]" />
-                  <span className="text-sm">+1 (302) 405-5540</span>
-                </a>
-              </div>
+              <ul className="space-y-1">
+                <li>
+                  <Link
+                    href="/contact"
+                    onClick={() => setIsOpen(false)}
+                    className="group flex items-center justify-between px-4 py-3 text-white hover:bg-white/10 rounded-xl transition-all duration-200"
+                  >
+                    <span className="text-base font-medium">Get in Touch</span>
+                    <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-[#4d86ad] group-hover:translate-x-1 transition-all" />
+                  </Link>
+                </li>
+              </ul>
             </div>
 
             {/* Legal Links */}
