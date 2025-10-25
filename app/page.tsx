@@ -109,67 +109,118 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-black py-16 sm:py-20 md:py-24 px-6 sm:px-8">
-        <div className="container max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <footer className="relative bg-gradient-to-br from-gray-950 via-black to-gray-950 py-20 sm:py-24 md:py-28 px-6 sm:px-8 overflow-hidden">
+        {/* Decorative gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#4d86ad]/5 via-transparent to-transparent pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#4d86ad]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#4d86ad]/5 rounded-full blur-3xl"></div>
+
+        <div className="container max-w-7xl mx-auto relative z-10">
+          {/* Top Section with Logo and CTA */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-16 pb-16 border-b border-white/10">
             <div className="space-y-4">
-              <h3 className="text-white text-lg font-semibold">Pages</h3>
-              <ul className="space-y-2">
+              <div className="flex items-center gap-4">
+                <div className="relative w-16 h-16">
+                  <Image src="/logo.png" alt="My Eye View" fill className="object-contain" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white tracking-tight">MY EYE VIEW</h3>
+                  <p className="text-sm text-gray-400">Experience the extraordinary</p>
+                </div>
+              </div>
+            </div>
+            <Link href="/contact">
+              <button className="px-8 py-4 bg-gradient-to-r from-[#4d86ad] to-[#3a6a8a] text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-[#4d86ad]/20 transition-all hover:scale-105">
+                Get Started
+              </button>
+            </Link>
+          </div>
+
+          {/* Links Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8 mb-16">
+            <div className="space-y-5">
+              <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider">Pages</h4>
+              <ul className="space-y-3">
                 <li>
-                  <Link href="/" className="text-white/80 hover:text-white transition-colors">
+                  <Link href="/" className="text-gray-300 hover:text-white transition-colors text-sm group flex items-center gap-2">
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-[#4d86ad] transition-all"></span>
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="/experiences" className="text-white/80 hover:text-white transition-colors">
+                  <Link href="/experiences" className="text-gray-300 hover:text-white transition-colors text-sm group flex items-center gap-2">
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-[#4d86ad] transition-all"></span>
                     Experiences
                   </Link>
                 </li>
                 <li>
-                  <Link href="/pricing" className="text-white/80 hover:text-white transition-colors">
+                  <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors text-sm group flex items-center gap-2">
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-[#4d86ad] transition-all"></span>
                     Pricing
                   </Link>
                 </li>
               </ul>
             </div>
 
-            <div className="space-y-4">
-              <h3 className="text-white text-lg font-semibold">Legal</h3>
-              <ul className="space-y-2">
+            <div className="space-y-5">
+              <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider">Legal</h4>
+              <ul className="space-y-3">
                 <li>
-                  <Link href="/terms" className="text-white/80 hover:text-white transition-colors">
+                  <Link href="/terms" className="text-gray-300 hover:text-white transition-colors text-sm group flex items-center gap-2">
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-[#4d86ad] transition-all"></span>
                     Terms of Use
                   </Link>
                 </li>
                 <li>
-                  <Link href="/privacy" className="text-white/80 hover:text-white transition-colors">
+                  <Link href="/privacy" className="text-gray-300 hover:text-white transition-colors text-sm group flex items-center gap-2">
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-[#4d86ad] transition-all"></span>
                     Privacy Policy
                   </Link>
                 </li>
               </ul>
             </div>
 
-            <div className="space-y-4">
-              <h3 className="text-white text-lg font-semibold">Contact</h3>
-              <ul className="space-y-2">
+            <div className="space-y-5">
+              <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider">Contact</h4>
+              <ul className="space-y-3">
                 <li>
-                  <a href="tel:+13024055540" className="text-white/80 hover:text-white transition-colors">
+                  <a href="tel:+13024055540" className="text-gray-300 hover:text-white transition-colors text-sm group flex items-center gap-2">
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-[#4d86ad] transition-all"></span>
                     +1 (302) 405-5540
                   </a>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-white/80 hover:text-white transition-colors">
+                  <Link href="/contact" className="text-gray-300 hover:text-white transition-colors text-sm group flex items-center gap-2">
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-[#4d86ad] transition-all"></span>
                     Contact Us
                   </Link>
                 </li>
               </ul>
             </div>
+
+            <div className="space-y-5">
+              <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider">Follow Us</h4>
+              <div className="flex gap-3">
+                <a href="#" className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-all hover:scale-110">
+                  <span className="text-white text-sm">f</span>
+                </a>
+                <a href="#" className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-all hover:scale-110">
+                  <span className="text-white text-sm">𝕏</span>
+                </a>
+                <a href="#" className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-all hover:scale-110">
+                  <span className="text-white text-sm">in</span>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div className="border-t border-white/20 pt-8 text-center space-y-2">
-            <p className="text-white text-xl font-semibold">MY EYE VIEW CORP</p>
-            <p className="text-white/70 text-sm">
-              © {new Date().getFullYear()} My Eye View. All rights reserved.
+          {/* Bottom Bar */}
+          <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-gray-500">
+              © {new Date().getFullYear()} My Eye View Corp. All rights reserved.
+            </p>
+            <p className="text-xs text-gray-600">
+              Designed with precision. Built for adventure.
             </p>
           </div>
         </div>
